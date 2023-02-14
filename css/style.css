@@ -1,0 +1,301 @@
+header {
+    width: 100%;
+    background-color: #111720;
+
+    height: 150px;
+    position: relative;
+    padding: 0px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+@font-face {
+    font-family: h1-font;
+    src: url("PressStart2P-Regular.ttf");
+}
+
+header h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fac650;
+    font-family: h1-font, cursive;
+
+    font-size: 32px;
+    letter-spacing: 0px;
+    word-spacing: 15px;
+}
+
+.content {
+    margin-top: -50px;
+    background-color: #222831;
+    height: 100vh;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    justify-content: center;
+
+}
+
+.text .t1 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: #222831;
+
+
+
+}
+
+.text .t1::before {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 100%;
+    background-color: #222831;
+    top: 0;
+    right: 0;
+
+    animation: texting-1 1s;
+}
+
+.text h2 {
+    font-size: 32px;
+
+
+}
+
+@keyframes texting-1 {
+    0% {
+        width: 100%;
+    }
+
+
+    100% {
+        width: 0;
+
+    }
+}
+
+.text .t2 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: #222831;
+
+
+
+}
+
+.text .t2::before {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 100%;
+    background-color: #222831;
+    top: 0;
+    right: 0;
+
+    animation: texting-1 1s 1s;
+}
+
+.text h3 {
+    margin-top: 20px;
+    font-size: 19px;
+
+
+
+
+
+}
+
+
+.result {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.res {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result .player {
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.result .player .img {
+    background-image: url(../images/paper.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 160px;
+    height: 160px;
+
+    z-index: 5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.result .computer {
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+
+.result .computer .img {
+    background-image: url(../images/paper.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 160px;
+    height: 160px;
+
+    z-index: 5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.result p {
+    margin-top: -10px;
+    font-size: 32px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.images {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.images .container {
+
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
+    height: 160px;
+
+}
+
+.images .container div {
+    background-image: url(../images/paper.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 160px;
+    height: 160px;
+    background-color: #393e46;
+    z-index: 5;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.images .container div::after {
+
+
+    content: "";
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+
+}
+
+.images .container div:hover {
+    background-size: 105px;
+
+
+}
+
+.images .container div:hover::after {
+    animation: rot 1.5s forwards;
+}
+
+/* @keyframes rot {
+    0% {
+        border-right: 2px solid #fac650;
+        transform: rotate(0turn);
+    }
+
+
+    100% {
+        transform: rotate(-1turn);
+        border: 2px solid #fac650;
+    }
+
+} */
+
+@keyframes rot {
+    0% {
+
+        border-right: 2px solid #fac650;
+    }
+
+    25% {
+        border-top: 2px solid #fac650;
+    }
+
+    50% {
+
+        border-left: 2px solid #fac650;
+    }
+
+    75% {
+        border-bottom: 2px solid #fac650;
+
+    }
+
+    100% {
+        border: 2px solid #fac650;
+
+
+    }
+
+}
+
+button {
+    border: none;
+    padding: none;
+    background-color: #222831;
+    border-radius: 50%;
+}
+
+button:hover {
+    cursor: pointer;
+}
